@@ -9,27 +9,42 @@ config ZMK_BLE
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
-config INPUT
-    default y
+# config INPUT
+    # default y
 
-config ZMK_POINTING
-    default y
+# config ZMK_POINTING
+    # default y
 
-config SPI
-    default y
+# config SPI
+    # default y
 
-config PMW3610
-    default y
+# config PMW3610
+    # default y
 
 endif
 
 if SHIELD_MONA2_R || SHIELD_MONA2_L
 
-config NFCT_PINS_AS_GPIOS
+# config NFCT_PINS_AS_GPIOS
+    # default y
+
+config NFCT_PINS_AS_GPIOS    # paw3222
     default y
 
 config ZMK_SPLIT
     default y
+
+config INPUT    # paw3222
+    default y    # paw3222
+
+config ZMK_POINTING    # paw3222
+    default y    # paw3222
+
+config SPI    # paw3222
+    default y    # paw3222
+
+config PAW3222    # paw3222
+    default y    # paw3222
 
 config RGBLED_WIDGET_BATTERY_LEVEL_HIGH
     default 30
