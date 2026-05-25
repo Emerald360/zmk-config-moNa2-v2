@@ -306,3 +306,6 @@ combos:
   k: {t: ESC, h: '4'}
 - p: [11, 12]
   k: TAB
+- p: [17, 18, 19]
+  k: J
+  l: [default]
