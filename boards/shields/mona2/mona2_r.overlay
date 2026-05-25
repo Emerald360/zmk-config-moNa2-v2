@@ -48,18 +48,10 @@
 
     trackball_central: trackball_central@0 {
         status = "okay";
-        //compatible = "pixart,pmw3610";  //トラボセンサ用のドライバとバインド
         compatible = "pixart,paw3222";  //トラボセンサ用のドライバとバインド paw3222
         reg = <0>;
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; //P0.02を指定(MOTION)
-        //cpi = <600>;    //pmw3610ではコメントアウトを外す
-        //swap-xy;
-        //invert-x; //COROPIT版ではコメントアウトを外す
-        //invert-y; //COROPIT版ではコメントアウトを外す
-        //evt-type = <INPUT_EV_REL>;    //pmw3610ではコメントアウトを外す
-        //x-input-code = <INPUT_REL_X>;    //pmw3610ではコメントアウトを外す
-        //y-input-code = <INPUT_REL_Y>;    //pmw3610ではコメントアウトを外す
     };
 };
 
@@ -69,12 +61,12 @@
     status = "okay";
     device = <&trackball_central>;
 
-    input-processors=<&zip_temp_layer 5 10000>,
-　　　<&zip_xy_transform INPUT_TRANSFORM_X_INVERT>, // 通常移動時の左右（X軸）を反転
-　　　<&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>; // 通常移動時の上下（Y軸）を反転
-    };
+    input-processors = 
+        <&zip_temp_layer 5 10000>,
+        <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>, // 通常移動時の左右（X軸）を反転
+        <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>; // 通常移動時の上下（Y軸）を反転
 
-scroller {
+    scroller {
         layers = <3>;
         input-processors = 
             <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,        //X軸とY軸の入れ替え
@@ -83,5 +75,4 @@ scroller {
             <&zip_scroll_transform INPUT_TRANSFORM_X_INVERT>,   //スクロールのX軸反転
             <&zip_scroll_scaler 1 5>;                           //スクロール量を1/4倍
     };
-
 };
