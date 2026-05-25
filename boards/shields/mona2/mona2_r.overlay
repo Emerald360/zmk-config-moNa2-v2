@@ -58,8 +58,8 @@
         //invert-x; //COROPIT版ではコメントアウトを外す
         //invert-y; //COROPIT版ではコメントアウトを外す
         //evt-type = <INPUT_EV_REL>;    //pmw3610ではコメントアウトを外す
-        x-input-code = <INPUT_REL_X>;    //pmw3610ではコメントアウトを外す
-        y-input-code = <INPUT_REL_Y>;    //pmw3610ではコメントアウトを外す
+        //x-input-code = <INPUT_REL_X>;    //pmw3610ではコメントアウトを外す
+        //y-input-code = <INPUT_REL_Y>;    //pmw3610ではコメントアウトを外す
     };
 };
 
