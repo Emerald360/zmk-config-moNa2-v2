@@ -60,8 +60,6 @@
         //evt-type = <INPUT_EV_REL>;    //pmw3610ではコメントアウトを外す
         //x-input-code = <INPUT_REL_X>;    //pmw3610ではコメントアウトを外す
         //y-input-code = <INPUT_REL_Y>;    //pmw3610ではコメントアウトを外す
-        <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>,
-        <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>;
     };
 };
 
