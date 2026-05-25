@@ -1,4 +1,4 @@
-z#include "mona2.dtsi"xcv
+z#include "mona2.dtsi
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 
