@@ -33,6 +33,12 @@
             bindings = <&kp TAB>;
             key-positions = <11 12>;
         };
+
+        f {
+            bindings = <&kp J>;
+            key-positions = <17 18 19>;
+            layers = <0>;
+        };
     };
 
     macros {
