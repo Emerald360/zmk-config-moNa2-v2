@@ -60,6 +60,8 @@
         //evt-type = <INPUT_EV_REL>;    //pmw3610ではコメントアウトを外す
         //x-input-code = <INPUT_REL_X>;    //pmw3610ではコメントアウトを外す
         //y-input-code = <INPUT_REL_Y>;    //pmw3610ではコメントアウトを外す
+        <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>,
+        <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>;
     };
 };
 
@@ -74,7 +76,7 @@
     scroller {
         layers = <3>;
         input-processors = 
-            <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,        //X軸とY軸の入れ替え
+            // <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,        //X軸とY軸の入れ替え
             //　<&zip_xy_transform INPUT_TRANSFORM_X_INVERT>,       //X軸反転
             <&zip_xy_to_scroll_mapper>,                         //スクロールモードに変更
             <&zip_scroll_transform INPUT_TRANSFORM_X_INVERT>,   //スクロールのX軸反転
