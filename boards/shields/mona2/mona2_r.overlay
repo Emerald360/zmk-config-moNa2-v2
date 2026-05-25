@@ -69,7 +69,7 @@
     status = "okay";
     device = <&trackball_central>;
 
-    input-processors=<&zip_temp_layer 5 10000>;
+    input-processors=<&zip_temp_layer 5 10000>,
 　　　<&zip_xy_transform INPUT_TRANSFORM_X_INVERT>, // 通常移動時の左右（X軸）を反転
 　　　<&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>; // 通常移動時の上下（Y軸）を反転
 
