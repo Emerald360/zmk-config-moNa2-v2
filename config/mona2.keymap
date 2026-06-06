@@ -42,6 +42,13 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
+
+        marukakko: marukakko {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_PARENTHESIS &kp LEFT &kp RIGHT_PARENTHESIS>;
+            label = "()";
+        };
     };
 
     behaviors {
@@ -110,10 +117,10 @@
 
         layer_1 {
             bindings = <
-&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3      &kp NUMBER_4       &kp NUMBER_5                    &kp NUMBER_6  &kp NUMBER_7          &kp NUMBER_8           &kp NUMBER_9  &kp NUMBER_0
-&trans        &trans        &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans                  &trans  &trans        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans        &kp BACKSLASH
-&trans        &trans        &trans            &trans             &trans        &trans    &trans  &trans        &trans                &trans                 &trans        &kp PIPE
-&trans        &trans        &trans            &trans             &trans        &trans    &trans  &trans                                                                   &trans
+&trans  &trans  &trans  &marukakko         &trans                    &trans        &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS
+&trans  &trans  &trans  &kp RIGHT_BRACKET  &trans            &trans  &kp NUMBER_0  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &mt EQUAL MINUS
+&trans  &trans  &trans  &trans             &trans  &trans    &trans  &kp DOT       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp STAR
+&trans  &trans  &trans  &trans             &trans  &trans    &trans  &trans                                                  &kp SLASH
             >;
 
             sensor-bindings = <&scroll_right_left>;
