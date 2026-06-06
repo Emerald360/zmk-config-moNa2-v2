@@ -74,7 +74,7 @@
         <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>; // 通常移動時の上下（Y軸）を反転
 
     scroller {
-        layers = <3>;
+        layers = <6>;
         input-processors = 
             // <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,        //X軸とY軸の入れ替え
             <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>,       //X軸反転
