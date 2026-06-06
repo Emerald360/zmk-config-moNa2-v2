@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: mona2}
 layers:
   default:
-  - Q
+  - '&td_EscQ'
   - W
   - E
   - R
@@ -37,7 +37,7 @@ layers:
   - LCTRL
   - LEFT WIN
   - LEFT ALT
-  - BACKSPACE
+  - '&BsDellL1'
   - {t: SPACE, h: '2'}
   - {t: '&to_layer_0 LANG2', h: '3'}
   - {t: '&to_layer_0 LANG1', h: '3'}
